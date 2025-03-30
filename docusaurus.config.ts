@@ -121,7 +121,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} RANDAO. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} RANDAO.`,
     },
     prism: {
       theme: prismThemes.github,
