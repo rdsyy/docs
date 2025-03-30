@@ -4,27 +4,158 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Light mode - black text on white background */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #000000;
+  --ifm-color-primary-dark: #000000;
+  --ifm-color-primary-darker: #000000;
+  --ifm-color-primary-darkest: #000000;
+  --ifm-color-primary-light: #333333;
+  --ifm-color-primary-lighter: #666666;
+  --ifm-color-primary-lightest: #999999;
+  --ifm-background-color: #ffffff;
+  --ifm-font-color-base: #000000;
+  --ifm-heading-color: #000000;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #f5f5f5;
+  --ifm-hero-background-color: #000000;
+  --ifm-hero-text-color: #ffffff;
+  --ifm-font-size-base: 16px;
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.5rem;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode - white text on black background */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #ffffff;
+  --ifm-color-primary-dark: #ffffff;
+  --ifm-color-primary-darker: #ffffff;
+  --ifm-color-primary-darkest: #ffffff;
+  --ifm-color-primary-light: #cccccc;
+  --ifm-color-primary-lighter: #999999;
+  --ifm-color-primary-lightest: #666666;
+  --ifm-background-color: #000000;
+  --ifm-font-color-base: #ffffff;
+  --ifm-heading-color: #ffffff;
+  --ifm-navbar-background-color: #000000;
+  --ifm-footer-background-color: #1a1a1a;
+  --ifm-hero-background-color: #ffffff;
+  --ifm-hero-text-color: #000000;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero section styling */
+.hero {
+  background-color: var(--ifm-hero-background-color);
+  color: var(--ifm-hero-text-color);
+}
+
+.hero__title,
+.hero__subtitle {
+  color: var(--ifm-hero-text-color);
+}
+
+/* Improve text readability */
+article {
+  font-size: var(--ifm-font-size-base);
+  line-height: 1.7;
+}
+
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3 {
+  color: var(--ifm-heading-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.theme-doc-markdown p {
+  margin-bottom: 1.5rem;
+}
+
+/* Social badges styling */
+.navbar-items--right a {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-items--right a:hover {
+  opacity: 1;
+}
+
+.footer__items a {
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer__items a:hover {
+  opacity: 1;
+}
+
+/* Social icons in navbar */
+.header-github-link,
+.header-x-link {
+  padding: 4px;
+  margin: 0 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.header-github-link:hover,
+.header-x-link:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.header-github-link::before,
+.header-x-link::before {
+  content: '';
+  width: 29px;
+  height: 29px;
+  display: flex;
+}
+
+.header-github-link::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000000' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
+}
+
+.header-x-link::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000000' d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'/%3E%3C/svg%3E") no-repeat;
+}
+
+[data-theme='dark'] .header-github-link::before,
+[data-theme='dark'] .header-x-link::before {
+  filter: invert(1);
+}
+
+/* Footer badges styling */
+.footer__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.footer__items a {
+  display: inline-block;
+  padding: 0.25rem 0;
+  transition: opacity 0.2s ease;
+}
+
+.footer__items a:hover {
+  opacity: 0.8;
+}
+
+.footer__items img {
+  height: 24px;
+  border-radius: 4px;
+}
+
+/* Ensure badges are visible in both light and dark modes */
+[data-theme='dark'] .footer__items img {
+  filter: brightness(1.1);
 }

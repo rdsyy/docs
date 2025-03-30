@@ -1,24 +1,23 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { RANDAO } from '@arcaogaming/project-links';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'RANDAO',
+  tagline: 'Onchain randomness brought to you by $RNG',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.ar.ionode.online',
+  url: 'https://docs.randao.ai',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'randao-ai', // Usually your GitHub org/user name.
+  projectName: 'docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -38,25 +37,20 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        // To enable blog, uncomment this section
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -66,25 +60,32 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.png',
     navbar: {
-      title: 'My Site',
+      title: 'RANDAO',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'RANDAO Logo',
+        src: 'img/logo.png',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: RANDAO.twitterFollow,
           position: 'right',
+          className: 'header-x-link',
+          'aria-label': 'X',
+        },
+        {
+          href: RANDAO.github,
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub',
         },
       ],
     },
@@ -92,28 +93,19 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              html: `<a href="${RANDAO.twitterFollow}" target="_blank"><img alt="X" src="https://img.shields.io/badge/X-Follow-333333?style=flat&logo=x"/></a>`,
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              html: `<a href="${RANDAO.discord}" target="_blank"><img alt="Discord" src="https://img.shields.io/badge/Discord-Join-333333?style=flat&logo=discord"/></a>`,
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              html: `<a href="${RANDAO.telegram}" target="_blank"><img alt="Telegram" src="https://img.shields.io/badge/Telegram-Join-333333?style=flat&logo=telegram"/></a>`,
+            },
+            {
+              html: `<a href="${RANDAO.youtube}" target="_blank"><img alt="YouTube" src="https://img.shields.io/badge/YouTube-Subscribe-333333?style=flat&logo=youtube"/></a>`,
             },
           ],
         },
@@ -121,23 +113,27 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              html: `<a href="${RANDAO.website}" target="_blank"><img alt="Website" src="https://img.shields.io/badge/Website-Visit-333333?style=flat&logo=google-chrome"/></a>`,
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              html: `<a href="${RANDAO.github}" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Star-333333?style=flat&logo=github"/></a>`,
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} RANDAO. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      darkTheme: prismThemes.github, // Use light theme for both
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false, // Enable dark mode switch
+      respectPrefersColorScheme: true, // Respect system preferences
     },
   } satisfies Preset.ThemeConfig,
+  plugins: [require.resolve('docusaurus-lunr-search')],
 };
 
 export default config;
