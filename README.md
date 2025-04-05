@@ -1,7 +1,7 @@
-# ArcAO Docusaurus + ARIO Template
+# RANDAO DOCS + NEWS
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://docs-template_game.permagate.io/)
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://docs_randao.ar.ionode.online/)
 
 </div>
 
