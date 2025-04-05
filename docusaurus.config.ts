@@ -11,12 +11,12 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.randao.ai',
+  url: RANDAO.website,
   // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  organizationName: 'randao-ai', // Usually your GitHub org/user name.
+  organizationName: 'Randao', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -39,18 +39,20 @@ const config: Config = {
           // Please change this to your repo.
         },
         // To enable blog, uncomment this section
-        // blog: {
-        //   showReadingTime: true,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
+        blog: {
+          path: 'news',
+          routeBasePath: 'news',
+          showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -74,7 +76,7 @@ const config: Config = {
           position: 'left',
           label: 'Documentation',
         },
-        // { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/news', label: 'Latest News', position: 'left' },
         {
           href: RANDAO.twitterFollow,
           position: 'right',
