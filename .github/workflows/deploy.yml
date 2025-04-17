@@ -38,6 +38,10 @@ jobs:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           DEPLOY_ANT_PROCESS_ID: ${{ secrets.DEPLOY_ANT_PROCESS_ID }}
 
+      # Delete package-lock so that install will use latest non breaking
+      - name: Delete package-lock.json
+        run: rm package-lock.json
+
       # Install project dependencies
       - name: Install dependencies
         run: npm install
