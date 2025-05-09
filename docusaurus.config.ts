@@ -68,6 +68,7 @@ const config: Config = {
       logo: {
         alt: 'RANDAO Logo',
         src: 'img/logo.png',
+        href: RANDAO.website,
       },
       items: [
         {
@@ -77,6 +78,7 @@ const config: Config = {
           label: 'Documentation',
         },
         { to: '/news', label: 'Latest News', position: 'left' },
+        { to: '/media-kit', label: 'Media Kit', position: 'left' },
         {
           href: RANDAO.twitterFollow,
           position: 'right',

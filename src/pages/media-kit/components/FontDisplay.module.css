@@ -1,0 +1,57 @@
+.fontContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.fontFamily {
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.fontHeader {
+    margin-bottom: 2rem;
+}
+
+.fontHeader h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.fontMeta {
+    color: var(--ifm-color-emphasis-600);
+    font-size: 0.9rem;
+}
+
+.weightExamples {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.weightExample {
+    padding: 1rem;
+    background: var(--ifm-color-emphasis-100);
+    border-radius: 4px;
+}
+
+.weightInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.weightName {
+    font-weight: 500;
+}
+
+.weightValue {
+    color: var(--ifm-color-emphasis-600);
+    font-family: var(--ifm-font-family-monospace);
+}
+
+.sampleText {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
