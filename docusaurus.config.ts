@@ -135,7 +135,16 @@ const config: Config = {
       respectPrefersColorScheme: true, // Respect system preferences
     },
   } satisfies Preset.ThemeConfig,
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-L3XHRDLD4R',
+        anonymizeIP: true, // Non-Optional: anonymize IP addresses
+      },
+    ],
+  ],
 };
 
 export default config;
