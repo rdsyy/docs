@@ -30,7 +30,7 @@ const mediaAssets: MediaAsset[] = [
         dimensions: '1000x200px'
     },
     {
-        name: 'RANDAO Youtube Header',
+        name: 'RANDAO Header',
         preview: '/media-kit/assets/RANDAO-Header.png',
         formats: [
             { type: 'PNG', url: '/media-kit/assets/RANDAO-Header.png' }
