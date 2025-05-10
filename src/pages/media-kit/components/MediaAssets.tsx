@@ -23,7 +23,7 @@ const mediaAssets: MediaAsset[] = [
     },
     {
         name: 'RANDAO Text Logo',
-        preview: '/media-kit/assets/RandAO Text LOGO.png',
+        preview: '/media-kit/assets/RandAO-Text-LOGO.png',
         formats: [
             { type: 'PNG', url: '/media-kit/assets/RandAO-Text-LOGO.png' }
         ],
@@ -31,7 +31,7 @@ const mediaAssets: MediaAsset[] = [
     },
     {
         name: 'RANDAO Youtube Header',
-        preview: '/media-kit/assets/RANDAO Youtube Header.png',
+        preview: '/media-kit/assets/RANDAO-Header.png',
         formats: [
             { type: 'PNG', url: '/media-kit/assets/RANDAO-Header.png' }
         ],
