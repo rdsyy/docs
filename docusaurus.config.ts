@@ -1,7 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import { RANDAO } from '@arcaogaming/project-links';
+import { ARCAO, RANDAO } from '@arcaogaming/project-links';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -11,7 +11,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: RANDAO.website,
+  url: `https://youtube.com`,
   // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/',
 
